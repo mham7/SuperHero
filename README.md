@@ -2,7 +2,7 @@
 
 ## Overview
 
-This backend application is built using ASP.NET Web API and provides a set of APIs for CRUD (Create, Read, Update, Delete) operations on a superhero table. Each superhero in the table has a name and a corresponding superpower. Additionally, the application includes APIs for user authentication and registration, allowing users to log in and register to view superheroes through the frontend.
+This backend application is built using ASP.NET Web API and provides a set of APIs for CRUD (Create, Read, Update, Delete) operations on a superhero table. Each superhero in the table has a name and a corresponding superpower. Additionally, the application includes APIs for user authentication and registration, allowing users to log in and register to view superheroes through the front end.
 
 ## Technologies Used
 
@@ -72,6 +72,13 @@ This backend application is built using ASP.NET Web API and provides a set of AP
       "password": "password123"
     }
     ```
+      - **Response:**
+    ```json
+    {
+       "username": "user123",
+       "passwordhash": "$2a$11$d7StdvHrsNfeWRnJ2fLRTOhrHTDWJ7Fq5YKomrMKR1A0v2uDZ6Ffe" 
+    }
+    ```
 
 - **User Login:**
   - **Endpoint:** `/api/auth/login`
@@ -80,13 +87,13 @@ This backend application is built using ASP.NET Web API and provides a set of AP
     ```json
     {
       "username": "user123",
-      "password": "password123"
+      "passwordhash": "password123"
     }
     ```
   - **Response:**
     ```json
     {
-      "token": "your_jwt_token"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     }
     ```
   - The password should be hashed before storing it in the database, and the login endpoint should verify the hashed password.
