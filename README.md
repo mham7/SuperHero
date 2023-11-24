@@ -52,13 +52,13 @@ This backend application is built using ASP.NET Web API and provides a set of AP
 - **Delete Superhero:**
   - **Endpoint:** `/api/superheroes/{id}`
   - **Method:** DELETE
-  ```json
-   **Request Body:**
+   - **Request Body:**
     ```json
     {
       "superpower": "Flight, Super strength, Heat vision"
     }
     ```
+
   
   
 
