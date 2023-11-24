@@ -59,7 +59,8 @@ This backend application is built using ASP.NET Web API and provides a set of AP
       "superpower": "Flight, Super strength, Heat vision"
     }
 
-  ### User Authentication
+
+## User Authentication
 
 - **User Registration:**
   - **Endpoint:** `/api/auth/register`
