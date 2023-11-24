@@ -13,8 +13,8 @@ This backend application is built using ASP.NET Web API and provides a set of AP
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/superhero-crud-backend.git
-   cd superhero-crud-backend
+   https://github.com/mham7/SuperHero.git
+   cd backend
 
 ## API Endpoints
 
