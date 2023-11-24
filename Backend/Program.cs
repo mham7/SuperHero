@@ -3,6 +3,7 @@ global using Backend.Data;
 using Backend.Services.SuperHeroServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Backend.Services.UserServices;
 
 
 
@@ -16,9 +17,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ISuperHeroService, SuperHeroService>();
+builder.Services.AddScoped<IUserService, UserService>();
 //var configuration = builder.Configuration.GetConnectionString("SuperHeroDbConnection");
 builder.Services.AddDbContext<DataContext>();
-
+builder.Services.AddDbContext<UserDataContext>();
 
 
 

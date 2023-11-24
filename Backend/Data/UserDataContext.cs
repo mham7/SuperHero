@@ -1,12 +1,10 @@
 ﻿global using Microsoft.EntityFrameworkCore;
 namespace Backend.Data
 {
-    public class DataContext : DbContext
+    public class UserDataContext :DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options):base(options) 
-        {
-            
-        }
+        public UserDataContext(DbContextOptions<UserDataContext> options):base(options) { }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -14,8 +12,6 @@ namespace Backend.Data
             optionsBuilder.UseSqlServer("Server= .\\SQLEXPRESS;Database=superherodb;Trusted_Connection=true;MultipleActiveResultSets=True; TrustServerCertificate=true; ");
         }
 
-        public DbSet<SuperHero> SuperHeroes { get; set; }
-        
-
+        public DbSet<User> Users { get; set; }
     }
 }
